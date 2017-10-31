@@ -185,7 +185,8 @@ export function autocomplete<T>(settings: AutocompleteSettings<T>): Autocomplete
             settings.fetch(input.value, function(elements: Array<AutocompleteItem<T>>): void {
                 if (keypressCounter === savedKeypressCounter && elements) {
                     items = elements;
-                    selected = items.length > 0 ? items[0] : undefined;
+                    // selected = items.length > 0 ? items[0] : undefined;
+                    selected = undefined;
                     update();
                 }
             });
